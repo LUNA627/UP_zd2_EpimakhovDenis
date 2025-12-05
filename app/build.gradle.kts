@@ -42,6 +42,7 @@ android {
 
 dependencies {
 
+    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.wear:wear:1.3.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation(libs.play.services.wearable)
@@ -55,6 +56,8 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(libs.core.splashscreen)
     implementation(libs.appcompat)
+    implementation(libs.filament.android)
+    implementation(libs.material3)
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)

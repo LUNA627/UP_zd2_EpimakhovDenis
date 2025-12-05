@@ -2,14 +2,17 @@ package com.example.prack_2_epimakhovd.presentation
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.prack_2_epimakhovd.R
 import com.google.gson.Gson
+import com.google.android.material.snackbar.Snackbar
 
-class SignInScreenActivity : ComponentActivity() {
+class SignInScreenActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var email: EditText
     private lateinit var password: EditText
@@ -23,6 +26,8 @@ class SignInScreenActivity : ComponentActivity() {
         password = findViewById(R.id.edit_password)
         loginButton = findViewById(R.id.button_enter)
 
+        val rView = findViewById<View>(android.R.id.content)
+
         val prefs = getSharedPreferences("user", MODE_PRIVATE)
         val gson = Gson()
 
@@ -31,7 +36,7 @@ class SignInScreenActivity : ComponentActivity() {
             val password = password.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Введите email и пароль", Toast.LENGTH_SHORT).show()
+                Snackbar.make(rView, "Введите email и пароль", Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -43,7 +48,7 @@ class SignInScreenActivity : ComponentActivity() {
                 val user = mapOf("email" to email, "password" to password)
                 val json = gson.toJson(user)
                 prefs.edit().putString("user_json", json).apply()
-                Toast.makeText(this, "Аккаунт создан! Вход выполнен.", Toast.LENGTH_SHORT).show()
+                Snackbar.make(rView, "Аккаунт создан! Вход выполнен.", Snackbar.LENGTH_SHORT).show()
                 startActivity(Intent(this, MainScreenActivity::class.java))
                 finish()
             } else {
@@ -53,11 +58,11 @@ class SignInScreenActivity : ComponentActivity() {
                 val savedPassword = savedUser["password"] as? String
 
                 if (email == savedEmail && password == savedPassword) {
-                    Toast.makeText(this, "Вход выполнен!", Toast.LENGTH_SHORT).show()
+                    Snackbar.make(rView, "Вход выполнен!", Snackbar.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainScreenActivity::class.java))
                     finish()
                 } else {
-                    Toast.makeText(this, "Неверный email или пароль", Toast.LENGTH_SHORT).show()
+                    Snackbar.make(rView, "Неверный email или пароль", Snackbar.LENGTH_SHORT).show()
                 }
             }
         }
