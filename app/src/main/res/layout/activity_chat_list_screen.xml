@@ -17,71 +17,71 @@
             android:id="@+id/back_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
             android:text="@string/text_title_chat"
             android:textColor="#1E90FF"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp" />
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
             android:text="@string/text_item_lucifer"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp" />
+            android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1E90FF"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#1E90FF" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
             android:text="@string/text_item_the_witcher"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp" />
+            android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1E90FF"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#1E90FF" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
             android:text="@string/text_item_LOST"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp" />
+            android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1E90FF"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#1E90FF" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
             android:text="@string/text_item_the_magicians"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp" />
+            android:textSize="18sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1E90FF"/>
+            android:background="#1E90FF" />
 
     </LinearLayout>
 
